@@ -1,0 +1,10 @@
+package:
+    type:           yii2-extension
+    name:           yii2-theme-agency
+    title:          Agency Theme for hiqdev/yii2-thememanager
+    headline:       Yii2 Theme Agency
+    keywords:       yii2, theme, agency
+    namespace:      hiqdev\themes\agency
+    description:    |
+        This package provides [Agency theme](https://startbootstrap.com/template-overviews/agency/)
+        for [Yii2 framework](http://yiiframework.com).
