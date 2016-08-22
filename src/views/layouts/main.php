@@ -3,10 +3,9 @@
 /**
  * Theme main layout.
  *
- * @var \yii\web\View $this View
+ * @var \yii\web\View View
  * @var string $content Content
  */
-
 use hiqdev\themes\flat\widgets\Alert;
 use hiqdev\themes\flat\widgets\Menu;
 use yii\widgets\Breadcrumbs;
@@ -34,7 +33,7 @@ use yii\widgets\Breadcrumbs;
         </div>
         <div class="collapse navbar-collapse">
             <?= Yii::$app->get('menuManager')->render('main', [
-                'class'   => Menu::class,
+                'class' => Menu::class,
                 'options' => ['class' => 'nav navbar-nav navbar-right'],
             ]) ?>
         </div>
@@ -54,7 +53,7 @@ use yii\widgets\Breadcrumbs;
                 <div class="col-sm-6">
                     <?= Breadcrumbs::widget([
                         'options' => ['class' => 'breadcrumb pull-right'],
-                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : []
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                     ]) ?>
                 </div>
             </div>
@@ -80,7 +79,7 @@ use yii\widgets\Breadcrumbs;
             </div>
             <div class="col-sm-6">
                 <?= Yii::$app->get('menuManager')->render('main', [
-                    'class'   => Menu::class,
+                    'class' => Menu::class,
                     'options' => ['class' => 'navbar-right'],
                 ]) ?>
             </div>

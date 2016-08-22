@@ -1,6 +1,16 @@
 <?php
 
+/*
+ * Agency Theme for hiqdev/yii2-thememanager
+ *
+ * @link      https://github.com/hiqdev/yii2-theme-agency
+ * @package   yii2-theme-agency
+ * @license   BSD-3-Clause
+ * @copyright Copyright (c) 2016, HiQDev (http://hiqdev.com/)
+ */
+
 namespace hiqdev\themes\agency;
+
 use yii\bootstrap\BootstrapAsset;
 use yii\bootstrap\BootstrapPluginAsset;
 use yii\web\AssetBundle;
@@ -11,12 +21,12 @@ use yii\web\AssetBundle;
 class Asset extends AssetBundle
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $sourcePath = '@hiqdev/themes/agency/assets';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $css = [
     ];
@@ -25,7 +35,7 @@ class Asset extends AssetBundle
     ];
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public $depends = [
         IEFixAsset::class,
