@@ -3,10 +3,9 @@
 /**
  * Theme home layout.
  *
- * @var \yii\web\View $this View
+ * @var \yii\web\View View
  * @var string $content Content
  */
-
 use hiqdev\themes\flat\widgets\Alert;
 
 ?>
