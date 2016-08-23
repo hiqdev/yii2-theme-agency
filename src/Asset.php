@@ -29,9 +29,19 @@ class Asset extends AssetBundle
      * {@inheritdoc}
      */
     public $css = [
+        'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css',
+
+        // Fonts
+        'https://fonts.googleapis.com/css?family=Montserrat:400,700',
+        'https://fonts.googleapis.com/css?family=Kaushan+Script',
+        'https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic',
+        'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
+
+        'css/agency.min.css',
     ];
 
     public $js = [
+        'js/agency.js'
     ];
 
     /**

@@ -6,10 +6,25 @@
  * @var \yii\web\View View
  * @var string $content Content
  */
-use hiqdev\themes\flat\widgets\Alert;
-use hiqdev\themes\flat\widgets\Menu;
-use yii\widgets\Breadcrumbs;
+use yii\bootstrap\Html;
+use yii\bootstrap\Nav;
 
+$isHome = Yii::$app->themeManager->isHomePage();
+if ($isHome) {
+    $this->registerJs("
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
+    // Offset for Main Navigation
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+    ");
+}
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,74 +34,86 @@ use yii\widgets\Breadcrumbs;
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only"><?= Yii::t('hiqdev/themes/flat', 'Toggle navigation') ?></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<?= Yii::$app->homeUrl ?>"><?= Yii::$app->name ?></a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <?= Yii::$app->get('menuManager')->render('main', [
-                'class' => Menu::class,
-                'options' => ['class' => 'nav navbar-nav navbar-right'],
-            ]) ?>
-        </div>
-    </div>
-</header>
-
-<?php if (!isset($this->params['noTitle'])) : ?>
-    <section id="title" class="emerald">
+<div id="page-top" class="index">
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top <?= (!$isHome) ? 'affix' : '' ?>">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1><?= $this->title ?></h1>
-                    <?php if (isset($this->params['subtitle'])) : ?>
-                        <p><?= $this->params['subtitle'] ?></p>
-                    <?php endif ?>
-                </div>
-                <div class="col-sm-6">
-                    <?= Breadcrumbs::widget([
-                        'options' => ['class' => 'breadcrumb pull-right'],
-                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                    ]) ?>
-                </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <?= Yii::t('hiqdev/themes/agency', 'Menu') ?>&nbsp;&nbsp;<i
+                        class="fa fa-bars"></i>
+                </button>
+                <?= Html::a(Yii::t('hiqdev/themes/agency', 'Start Bootstrap'), '/', ['class' => 'navbar-brand']) ?>
             </div>
-        </div>
-    </section><!--/#title-->
-<?php endif ?>
 
-<?= Alert::widget() ?>
-
-<?php if (Yii::$app->themeManager->isHomePage()) : ?>
-    <?= $content ?>
-<?php else: ?>
-    <section id="<?= isset($this->params['contentId']) ? $this->params['contentId'] : 'content' ?>" class="container">
-        <?= $content ?>
-    </section>
-<?php endif ?>
-
-<footer id="footer" class="midnight-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                &copy; <?= date('Y') ?> <?= Yii::$app->params['orgName'] ?>. <?= Yii::t('hiqdev/themes/flat', 'All Rights Reserved') ?>.
-            </div>
-            <div class="col-sm-6">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <?= Yii::$app->get('menuManager')->render('main', [
-                    'class' => Menu::class,
-                    'options' => ['class' => 'navbar-right'],
+                    'class' => Nav::class,
+                    'options' => ['class' => 'nav navbar-nav navbar-right'],
                 ]) ?>
             </div>
+            <!-- /.navbar-collapse -->
         </div>
-    </div>
-</footer><!--/#footer-->
+        <!-- /.container-fluid -->
+    </nav>
 
+
+    <?php if (Yii::$app->themeManager->isHomePage()) : ?>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in">Welcome To Our Studio!</div>
+                    <div class="intro-heading">It's Nice To Meet You</div>
+                    <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                </div>
+            </div>
+        </header>
+        <?= $content ?>
+    <?php else: ?>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?= $content ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
 <?php $this->endBody() ?>
 </body>
 </html>
