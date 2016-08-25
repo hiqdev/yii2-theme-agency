@@ -90,20 +90,13 @@ if ($isHome) {
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">
-                        Copyright &copy; <?= date('Y') ?> <?= Yii::$app->params['orgName'] ?>
-                        . <?= Yii::t('hiqdev/themes/agency', 'All rights reserved.') ?>
+                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
+                        <?= Yii::t('hiqdev/themes/agency', 'All rights reserved.') ?>
                     </span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <?php foreach (['twitter', 'facebook', 'vk', 'youtube', 'instagram', 'pinterest', 'github'] as $name) : ?>
-                            <?php $icon = $name === 'github' ? 'github-alt' : $name ?>
-                            <?php $link = $name . '_link' ?>
-                            <?php if (isset(Yii::$app->params[$link]) && Yii::$app->params[$link]) : ?>
-                                <li><a href="<?= Yii::$app->params[$link] ?>" title="<?= ucfirst($name) ?>"><i
-                                            class="fa fa-<?= $icon ?>"></i></a></li>
-                            <?php endif ?>
-                        <?php endforeach ?>
+                        <?= Yii::$app->themeManager->widget('SocialLink') ?>
                     </ul>
                 </div>
                 <div class="col-md-4">
