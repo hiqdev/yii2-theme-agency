@@ -96,7 +96,7 @@ if ($isHome) {
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <?= Yii::$app->themeManager->widget('SocialLink') ?>
+                        <?= Yii::$app->themeManager->widget('SocialLinks') ?>
                     </ul>
                 </div>
                 <div class="col-md-4">
