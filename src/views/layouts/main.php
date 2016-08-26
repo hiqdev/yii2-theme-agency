@@ -34,6 +34,11 @@ if ($isHome) {
 </head>
 <body>
 <?php $this->beginBody() ?>
+
+<?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
+    <?= Yii::$app->themeManager->widget('Flashes') ?>
+<?php endif ?>
+
 <div id="page-top" class="index">
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top <?= (!$isHome) ? 'affix' : '' ?>">
