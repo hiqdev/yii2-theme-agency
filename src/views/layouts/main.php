@@ -30,7 +30,7 @@ if ($isHome) {
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <?= $this->render('//layouts/head') ?>
+    <?= $this->render('//layouts/_head') ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -65,17 +65,9 @@ if ($isHome) {
         <!-- /.container-fluid -->
     </nav>
 
-
     <?php if (Yii::$app->themeManager->isHomePage()) : ?>
-        <!-- Header -->
         <header>
-            <div class="container">
-                <div class="intro-text">
-                    <div class="intro-lead-in">Welcome To Our Studio!</div>
-                    <div class="intro-heading">It's Nice To Meet You</div>
-                    <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
-                </div>
-            </div>
+            <?= $this->render('//layouts/_splash') ?>
         </header>
         <?= $content ?>
     <?php else: ?>
@@ -88,7 +80,7 @@ if ($isHome) {
                 </div>
             </div>
         </section>
-    <?php endif; ?>
+    <?php endif ?>
 
     <footer>
         <div class="container">
