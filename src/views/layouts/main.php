@@ -50,7 +50,7 @@ if ($isHome) {
                     <span class="sr-only">Toggle navigation</span> <?= Yii::t('hiqdev/themes/agency', 'Menu') ?>&nbsp;&nbsp;<i
                         class="fa fa-bars"></i>
                 </button>
-                <?= Html::a(Yii::t('hiqdev/themes/agency', 'Start Bootstrap'), '/', ['class' => 'navbar-brand']) ?>
+                <?= Html::a(Yii::t('hiqdev/themes/agency', Yii::$app->name), Yii::$app->homeUrl, ['class' => 'navbar-brand']) ?>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,7 +95,7 @@ if ($isHome) {
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">
-                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
+                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
                         <?= Yii::t('hiqdev/themes/agency', 'All rights reserved.') ?>
                     </span>
                 </div>
