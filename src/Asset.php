@@ -41,7 +41,7 @@ class Asset extends AssetBundle
     ];
 
     public $js = [
-        'js/agency.js'
+        'js/agency.js',
     ];
 
     /**
