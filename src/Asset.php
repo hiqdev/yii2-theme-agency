@@ -38,6 +38,7 @@ class Asset extends AssetBundle
         'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
 
         'css/agency.min.css',
+        'css/custom.css',
     ];
 
     public $js = [
