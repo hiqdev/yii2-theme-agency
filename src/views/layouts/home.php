@@ -22,7 +22,7 @@ use yii\bootstrap\Alert;
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"><?= Yii::t('hiqdev/themes/flat', 'Toggle navigation') ?></span>
+                    <span class="sr-only"><?= Yii::t('hiqdev:themes:agency', 'Toggle navigation') ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -46,7 +46,7 @@ use yii\bootstrap\Alert;
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2014 <?= Yii::$app->name ?>. <?= Yii::t('hiqdev/themes/flat', 'All Rights Reserved') ?>.
+                    &copy; 2014 <?= Yii::$app->name ?>. <?= Yii::t('hiqdev:themes:agency', 'All Rights Reserved') ?>.
                 </div>
                 <div class="col-sm-6">
                     <?= $this->render('//layouts/top-menu', ['footer' => true]) ?>

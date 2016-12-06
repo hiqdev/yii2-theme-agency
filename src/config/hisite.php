@@ -18,12 +18,9 @@ return [
         ],
         'i18n' => [
             'translations' => [
-                'hiqdev/themes/agency' => [
+                'themes:agency' => [
                     'class' => \yii\i18n\PhpMessageSource::class,
                     'basePath' => '@hiqdev/themes/agency/messages',
-                    'fileMap' => [
-                        'agency' => 'agency.php',
-                    ],
                 ],
             ],
         ],

@@ -47,10 +47,10 @@ if ($isHome) {
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> <?= Yii::t('hiqdev/themes/agency', 'Menu') ?>&nbsp;&nbsp;<i
+                    <span class="sr-only">Toggle navigation</span> <?= Yii::t('hiqdev:themes:agency', 'Menu') ?>&nbsp;&nbsp;<i
                         class="fa fa-bars"></i>
                 </button>
-                <?= Html::a(Yii::t('hiqdev/themes/agency', Yii::$app->name), Yii::$app->homeUrl, ['class' => 'navbar-brand']) ?>
+                <?= Html::a(Yii::t('hiqdev:themes:agency', Yii::$app->name), Yii::$app->homeUrl, ['class' => 'navbar-brand']) ?>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -88,7 +88,7 @@ if ($isHome) {
                 <div class="col-md-4">
                     <span class="copyright">
                         &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
-                        <?= Yii::t('hiqdev/themes/agency', 'All rights reserved.') ?>
+                        <?= Yii::t('hiqdev:themes:agency', 'All rights reserved.') ?>
                     </span>
                 </div>
                 <div class="col-md-4">
