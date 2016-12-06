@@ -6,7 +6,7 @@
  * @var \yii\web\View View
  * @var string $content Content
  */
-use hiqdev\themes\flat\widgets\Alert;
+use yii\bootstrap\Alert;
 
 ?>
 <?php $this->beginPage(); ?>
