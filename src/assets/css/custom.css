@@ -1,7 +1,11 @@
+/* Header */
+
 header {
     background-image: url(../img/header-bg-2.jpg)!important;
 }
+
 /* Pricing tables */
+
 .pricing {
     position: relative;
     margin-bottom: 15px;
@@ -117,4 +121,36 @@ header {
     padding: 15px 0;
     font-size: 80px;
     transition: color 0.5s ease-in-out;
+}
+
+/* Footer */
+
+.contact-grid {
+    font-weight: 400;
+    font-size: 1.2em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.7em;
+    color: #FFF;
+    margin-bottom: 1.8em;
+    display: block;
+}
+.contact-grid p,
+.contact-grid p a {
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1.1em;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0.8em 0;
+}
+.contact-grid p a {
+    text-decoration:none;
+}
+.contact-grid p a:hover{
+    color:#35C2F8;
+}
+.contact-grid p span,
+.contact-grid p i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.3em;
 }
