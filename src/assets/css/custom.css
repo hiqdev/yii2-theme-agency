@@ -154,3 +154,7 @@ header {
     vertical-align: middle;
     margin-right: 0.3em;
 }
+
+.intro-text .btn-xl {
+    background-color: transparent;
+}
