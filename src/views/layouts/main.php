@@ -7,7 +7,7 @@
  * @var string $content Content
  */
 use yii\bootstrap\Html;
-use yii\bootstrap\Nav;
+use yii\widgets\Menu;
 
 $isHome = Yii::$app->themeManager->isHomePage();
 if ($isHome) {
@@ -56,7 +56,7 @@ if ($isHome) {
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <?= Yii::$app->get('menuManager')->render('main', [
-                    'class' => Nav::class,
+                    'class' => Menu::class,
                     'options' => ['class' => 'nav navbar-nav navbar-right'],
                 ]) ?>
             </div>
