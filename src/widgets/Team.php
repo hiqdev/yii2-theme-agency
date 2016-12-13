@@ -26,7 +26,7 @@ class Team extends Widget
             $out .= Html::beginTag('ul', ['class' => 'list-inline social-buttons']);
             foreach ($this->social as $icon => $url) {
                 $out .= Html::beginTag('li');
-                $out .= Html::a(Html::tag('i', null, ['class' => 'fa fa-fw ' . $icon]), $url);
+                $out .= Html::a(Html::tag('i', null, ['class' => 'fa fa-fw ' . $icon]), $url, ['target' => '_blank']);
                 $out .= Html::endTag('li');
             }
             $out .= Html::endTag('ul');
