@@ -42,7 +42,6 @@ class Asset extends AssetBundle
     ];
 
     public $js = [
-        'js/jquery.easing.min.js',
         'js/agency.js',
     ];
 
