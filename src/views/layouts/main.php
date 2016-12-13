@@ -31,6 +31,15 @@ if ($isHome) {
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <?= $this->render('//layouts/_head') ?>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": "<?= Yii::$app->name ?>",
+      "url": "<?= Yii::$app->request->hostInfo ?>",
+      "email": "<?= Yii::$app->params['supportEmail'] ?>"
+    }
+</script>
 </head>
 <body>
 <?php $this->beginBody() ?>
