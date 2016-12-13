@@ -50,7 +50,7 @@ if ($isHome) {
                     <span class="sr-only">Toggle navigation</span> <?= Yii::t('hiqdev:themes:agency', 'Menu') ?>&nbsp;&nbsp;<i
                         class="fa fa-bars"></i>
                 </button>
-                <?= Html::a(Yii::t('hiqdev:themes:agency', Yii::$app->name), Yii::$app->homeUrl, ['class' => 'navbar-brand']) ?>
+                <?= Html::a(Yii::t('hiqdev:themes:agency', Yii::$app->name), '#page-top', ['class' => 'navbar-brand page-scroll']) ?>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
