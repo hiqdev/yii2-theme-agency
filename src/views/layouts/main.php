@@ -39,7 +39,14 @@ if ($isHome) {
       "url": "<?= Yii::$app->request->hostInfo ?>",
       "email": "<?= Yii::$app->params['supportEmail'] ?>"
     }
-</script>
+
+
+
+
+
+
+
+    </script>
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -96,7 +103,8 @@ if ($isHome) {
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">
-                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>.
+                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
+                        .
                         <?= Yii::t('hiqdev:themes:agency', 'All rights reserved.') ?>
                     </span>
                 </div>
@@ -104,6 +112,12 @@ if ($isHome) {
                     <ul class="list-inline social-buttons">
                         <?= Yii::$app->themeManager->widget('SocialLinks') ?>
                     </ul>
+                    <span class="copyright">
+                        <?= Yii::$app->themeManager->widget([
+                            'class' => 'LanguageMenu',
+                            'view' => 'miniLanguageMenu',
+                        ]) ?>
+                    </span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
