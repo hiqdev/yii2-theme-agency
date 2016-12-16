@@ -74,6 +74,7 @@ if ($isHome) {
                 <?= Yii::$app->get('menuManager')->render('main', [
                     'class' => Menu::class,
                     'options' => ['class' => 'nav navbar-nav navbar-right'],
+                    'linkTemplate' => '<a href="{url}" class="page-scroll">{label}</a>',
                 ]) ?>
             </div>
             <!-- /.navbar-collapse -->
