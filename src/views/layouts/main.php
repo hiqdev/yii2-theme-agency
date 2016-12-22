@@ -6,6 +6,12 @@
  * @var \yii\web\View View
  * @var string $content Content
  */
+use hiqdev\thememanager\menus\AbstractMainMenu;
+use hiqdev\thememanager\widgets\CopyrightYears;
+use hiqdev\thememanager\widgets\Flashes;
+use hiqdev\thememanager\widgets\OrganizationLink;
+use hiqdev\thememanager\widgets\SocialLinks;
+use hiqdev\yii2\language\menus\LanguageMenu;
 use yii\bootstrap\Html;
 use yii\widgets\Menu;
 
@@ -41,19 +47,12 @@ if ($isHome) {
     }
 
 
-
-
-
-
-
     </script>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<?php if (Yii::$app->themeManager->hasWidget('Flashes')) : ?>
-    <?= Yii::$app->themeManager->widget('Flashes') ?>
-<?php endif ?>
+<?= Flashes::widget() ?>
 
 <div id="page-top" class="index">
     <!-- Navigation -->
@@ -71,7 +70,7 @@ if ($isHome) {
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <?= Yii::$app->get('menuManager')->render('main', [
+                <?= AbstractMainMenu::widget([], [
                     'class' => Menu::class,
                     'options' => ['class' => 'nav navbar-nav navbar-right'],
                     'linkTemplate' => '<a href="{url}" class="page-scroll">{label}</a>',
@@ -104,20 +103,17 @@ if ($isHome) {
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">
-                        &copy; <?= Yii::$app->themeManager->widget('CopyrightYears') ?> <?= Yii::$app->themeManager->widget('OrganizationLink') ?>
+                        &copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>
                         .
                         <?= Yii::t('hiqdev:themes:agency', 'All rights reserved.') ?>
                     </span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <?= Yii::$app->themeManager->widget('SocialLinks') ?>
+                        <?= SocialLinks::widget() ?>
                     </ul>
                     <span class="copyright">
-                        <?= Yii::$app->themeManager->widget([
-                            'class' => 'LanguageMenu',
-                            'view' => 'miniLanguageMenu',
-                        ]) ?>
+                        <?= LanguageMenu::widget() ?>
                     </span>
                 </div>
                 <div class="col-md-4">

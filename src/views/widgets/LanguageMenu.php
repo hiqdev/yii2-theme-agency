@@ -10,14 +10,14 @@ use yii\helpers\Url;
 $delimiter = '&nbsp;·&nbsp;';
 $out = '';
 ?>
-<?php if (is_array($languages)) : ?>
+<?php if (is_array($items)) : ?>
     <ul class="list-inline">
         <?php
-        foreach ($languages as $code => $lang) {
-            if (mb_stristr($language, $code)) {
-                $out .= Html::tag('li', $lang);
+        foreach ($items as $code => $data) {
+            if ($data['active']) {
+                $out .= Html::tag('li', $data['label']);
             } else {
-                $out .= Html::tag('li', Html::a($lang, Url::to(array_merge($selectUrl, ['language' => $code]))));
+                $out .= Html::tag('li', Html::a($data['label'], $data['url']));
             }
             $out .= $delimiter;
         }
