@@ -27,4 +27,4 @@ use yii\helpers\Html;
             <?= Html::img($imagePath . "/logos/{$image}", ['class' => 'img-responsive img-centered']) ?>
         </a>
     </div>
-<?php endforeach; ?>
+<?php endforeach ?>
