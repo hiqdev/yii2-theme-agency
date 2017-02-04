@@ -9,6 +9,15 @@ use yii\helpers\Url;
 ?>
 <title><?= Html::encode($this->title); ?></title>
 <?= Html::csrfMetaTags(); ?>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "<?= Yii::$app->name ?>",
+    "url": "<?= Yii::$app->request->hostInfo ?>",
+    "email": "<?= Yii::$app->params['supportEmail'] ?>"
+}
+</script>
 <?php $this->head();
 
 Yii::$app->get('themeManager')->registerAssets();
