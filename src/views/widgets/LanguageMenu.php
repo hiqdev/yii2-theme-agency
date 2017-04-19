@@ -10,7 +10,7 @@ use yii\helpers\Url;
 $delimiter = '&nbsp;·&nbsp;';
 $out = '';
 ?>
-<?php if (is_array($items)) : ?>
+<?php if (count($items)>1) : ?>
     <ul class="list-inline">
         <?php
         foreach ($items as $code => $data) {
@@ -24,4 +24,4 @@ $out = '';
         print rtrim($out, $delimiter);
         ?>
     </ul>
-<?php endif; ?>
+<?php endif ?>
