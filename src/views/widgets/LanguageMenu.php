@@ -3,14 +3,13 @@
 /** @var array $languages */
 /** @var string $language */
 /** @var array|mixed $selectUrl */
-
 use yii\helpers\Html;
 use yii\helpers\Url;
 
 $delimiter = '&nbsp;·&nbsp;';
 $out = '';
 ?>
-<?php if (count($items)>1) : ?>
+<?php if (count($items) > 1) : ?>
     <ul class="list-inline">
         <?php
         foreach ($items as $code => $data) {
@@ -21,7 +20,7 @@ $out = '';
             }
             $out .= $delimiter;
         }
-        print rtrim($out, $delimiter);
+        echo rtrim($out, $delimiter);
         ?>
     </ul>
 <?php endif ?>

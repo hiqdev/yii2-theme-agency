@@ -1,5 +1,4 @@
-Yii2 Theme Agency
-=================
+# Yii2 Theme Agency
 
 **Agency Theme for hiqdev/yii2-thememanager**
 
@@ -8,6 +7,7 @@ Yii2 Theme Agency
 [![Build Status](https://img.shields.io/travis/hiqdev/yii2-theme-agency.svg)](https://travis-ci.org/hiqdev/yii2-theme-agency)
 [![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/hiqdev/yii2-theme-agency.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-agency/)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/yii2-theme-agency.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-agency/)
+[![Dependency Status](https://www.versioneye.com/php/hiqdev:yii2-theme-agency/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:yii2-theme-agency/dev-master)
 
 This package provides [Agency theme](https://startbootstrap.com/template-overviews/agency/)
 for [Yii2 framework](http://yiiframework.com).
@@ -35,4 +35,4 @@ to the require section of your composer.json.
 This project is released under the terms of the BSD-3-Clause [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
 
-Copyright © 2016, HiQDev (http://hiqdev.com/)
+Copyright © 2016-2017, HiQDev (http://hiqdev.com/)

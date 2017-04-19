@@ -1,4 +1,8 @@
-<?php use yii\helpers\Html; ?>
+<?php
+
+use yii\helpers\Html;
+
+?>
 <div class="pricing hover-effect <?= $activeClass ?>">
     <div class="pricing-head">
         <h3><?= $title ?><span><?= $subTitle ?></span></h3>
