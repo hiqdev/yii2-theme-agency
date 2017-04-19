@@ -11,8 +11,7 @@ use hiqdev\yii2\language\menus\LanguageMenu;
         <div class="row">
             <div class="col-md-4">
                 <span class="copyright">
-                    &copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>
-                    .
+                    &copy; <?= CopyrightYears::widget() ?> <?= OrganizationLink::widget() ?>.
                     <?= Yii::t('hiqdev:themes:agency', 'All rights reserved.') ?>
                 </span>
             </div>
@@ -20,9 +19,11 @@ use hiqdev\yii2\language\menus\LanguageMenu;
                 <ul class="list-inline social-buttons">
                     <?= SocialLinks::widget() ?>
                 </ul>
-                <span class="copyright">
-                    <?= LanguageMenu::widget() ?>
-                </span>
+                <?php if (class_exists(LanguageMenu::class)) : ?>
+                    <span class="copyright">
+                        <?= LanguageMenu::widget() ?>
+                    </span>
+                <?php endif ?>
             </div>
             <div class="col-md-4">
                 <ul class="list-inline quicklinks">
