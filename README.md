@@ -9,8 +9,10 @@
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/hiqdev/yii2-theme-agency.svg)](https://scrutinizer-ci.com/g/hiqdev/yii2-theme-agency/)
 [![Dependency Status](https://www.versioneye.com/php/hiqdev:yii2-theme-agency/dev-master/badge.svg)](https://www.versioneye.com/php/hiqdev:yii2-theme-agency/dev-master)
 
-This package provides [Agency theme](https://startbootstrap.com/template-overviews/agency/)
-for [Yii2 framework](http://yiiframework.com).
+This package provides [Agency theme] for [Yii2 framework].
+
+[Agency theme]:     https://startbootstrap.com/template-overviews/agency/
+[Yii2 framework]:   http://yiiframework.com/
 
 ## Installation
 
