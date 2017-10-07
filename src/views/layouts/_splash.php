@@ -1,7 +1,7 @@
 <div class="container">
     <div class="intro-text">
-        <div class="intro-lead-in">Control all your services from a single place</div>
-        <div class="intro-heading">NEXT GENERATION CONTROL PANEL</div>
+        <div class="intro-lead-in"><?= Yii::$app->params['site.subtitle'] ?></div>
+        <div class="intro-heading text-uppercase"><?= Yii::$app->params['site.title'] ?></div>
         <div class="row">
             <div class="col-sm-4 col-sm-offset-2">
                 <a href="#features" class="page-scroll btn btn-xl btn-block">Tell Me More</a>
