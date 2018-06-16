@@ -4,7 +4,6 @@
 /** @var string $language */
 /** @var array|mixed $selectUrl */
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 $delimiter = '&nbsp;·&nbsp;';
 $out = '';

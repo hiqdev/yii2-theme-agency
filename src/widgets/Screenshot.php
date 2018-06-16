@@ -5,7 +5,7 @@
  * @link      https://github.com/hiqdev/yii2-theme-agency
  * @package   yii2-theme-agency
  * @license   BSD-3-Clause
- * @copyright Copyright (c) 2016-2017, HiQDev (http://hiqdev.com/)
+ * @copyright Copyright (c) 2016-2018, HiQDev (http://hiqdev.com/)
  */
 
 namespace hiqdev\themes\agency\widgets;
@@ -33,6 +33,7 @@ class Screenshot extends Widget
         $this->_modalId = mt_rand();
         $modal = $this->getModal();
         $this->getView()->registerJs("$('{$modal}').appendTo('body')");
+
         return $this->getPreview();
     }
 
