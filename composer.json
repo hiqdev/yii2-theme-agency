@@ -58,8 +58,8 @@
     },
     "extra": {
         "config-plugin": {
-            "params": "src/config/params.php",
-            "hisite": "src/config/hisite.php"
+            "params": "config/params.php",
+            "hisite": "config/hisite.php"
         }
     },
     "repositories": [
